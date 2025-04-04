@@ -15,13 +15,18 @@
 ```
 TzTrood/
 ├── cmd/
-│   └── main.go                    # Точка входа
+│   └── server/
+│       └── main.go               # Точка входа
 ├── internal/
 │   └── server/
-│       ├── config/               # Конфигурация (mock)
+│       ├── config/               # Конфигурация приложения
 │       │   └── config.go
-│       ├── repository/
-│       │   ├── interface.go      # Интерфейс хранилища
+│       ├── delivery/
+│       │   └── httpapi/
+│       │       └── handlers/
+│       │           └── messageHandler.go
+│       ├── repository/          # Репозитории данных
+│       │   ├── interface.go      # Интерфейсы хранилищ
 │       │   ├── nlp/              # Работа с NLP-сервисом
 │       │   │   └── httpNLP.go
 │       │   └── redisdb/          # Работа с Redis
